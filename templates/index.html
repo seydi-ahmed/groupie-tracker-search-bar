@@ -25,7 +25,9 @@
         <input type="text" id="artistSearch" list="artists">
         <datalist id="artists">
             {{ range . }}
-            <option value="{{ .Name }}"> {{ .Name }} </option>alue="Premier album: {{ .FirstAlbum }}">Premier album: {{ .FirstAlbum }}</option>
+            <option> {{ .Name }} </option>
+            <option>{{ .FirstAlbum }}</option>
+            <option> {{ .YearCreation }} </option>
             {{ end }}
         </datalist>
     </div>
