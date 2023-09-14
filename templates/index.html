@@ -17,8 +17,20 @@
             <img src="/static/locations.jpg" alt="Emplacements" class="nav-icon">
         </a>
     </nav>
+
     <div class="section"><h1 style="color: white;">Liste des artistes</h1></div>
+
+    <div class="section">
+        <label for="artistSearch">Recherche d'artiste:</label>
+        <input type="text" id="artistSearch" list="artists">
+        <datalist id="artists">
+            {{ range . }}
+            <option value="{{ .Name }}"> {{ .Name }} </option>alue="Premier album: {{ .FirstAlbum }}">Premier album: {{ .FirstAlbum }}</option>
+            {{ end }}
+        </datalist>
+    </div>
     
+
     <ul>
         {{range .}}
         <li>
