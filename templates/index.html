@@ -28,14 +28,13 @@
             <option value="{{ .Name }}"> {{ .Name }} </option>
             <option value="{{ .FirstAlbum }}"> {{ .Name }} - First Album - {{ .FirstAlbum }} </option>
             <option value="{{ .YearCreation }}"> {{ .Name }} - Year Creation - {{ .YearCreation }} </option>
+            {{ with index .Members 0 }}
+            <option value="{{ . }}"> {{ . }} </option>
             {{ end }}
-
-            {{ range $location := . }}
-            <option value="{{ $location }}"> {{ .Name }} - Location - {{ $location }} </option>
             {{ end }}
-
         </datalist>
     </div>
+    
     
 
     <ul>
