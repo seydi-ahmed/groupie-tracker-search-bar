@@ -345,3 +345,7 @@ nav img {
     margin: 0;
     color: white;
 }
+
+#artistSearch {
+    width: 300px; /* Vous pouvez ajuster cette valeur en fonction de la largeur souhaitée */
+}
