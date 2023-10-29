@@ -9,6 +9,9 @@ import (
 
 func main() {
 
+	a, _ := src.FetchLocations()
+	fmt.Println(a)
+
 	http.HandleFunc("/", src.Home)
 	http.HandleFunc("/artists/", src.ArtistPage)
 	http.HandleFunc("/dates", src.HandleDates)
