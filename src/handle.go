@@ -89,33 +89,6 @@ func ErrorPage(w http.ResponseWriter, r *http.Request, status int, title, messag
 	}
 }
 
-//************************************************************************
-//************************************************************************
-
-// // Fonction pour gérer la page des dates de concert
-// func HandleDates(w http.ResponseWriter, r *http.Request) {
-// 	dateToArtistsMap, err := GetDateToIDMap()
-// 	if err != nil {
-// 		http.Error(w, "Erreur lors de la récupération des dates de concert", http.StatusInternalServerError)
-// 		return
-// 	}
-
-// 	tmpl := template.Must(template.ParseFiles("templates/dates.html"))
-// 	tmpl.Execute(w, dateToArtistsMap)
-// }
-
-// // Function to handle the locations API
-// func HandleLocations(w http.ResponseWriter, r *http.Request) {
-// 	locationToIDsMap, err := GetLocationToIDMap()
-// 	if err != nil {
-// 		http.Error(w, "Erreur lors de la récupération des emplacements", http.StatusInternalServerError)
-// 		return
-// 	}
-
-// 	tmpl := template.Must(template.ParseFiles("templates/locations.html"))
-// 	tmpl.Execute(w, locationToIDsMap)
-// }
-
 // Créez une variable globale pour stocker les données des dates de concert en cache
 var cachedDatesData map[string][]string
 

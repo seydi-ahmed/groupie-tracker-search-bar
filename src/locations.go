@@ -19,6 +19,23 @@ type LocationDATA struct {
 	DatesURL  string   `json:"dates"`
 }
 
+func GetLocationNameByID(locationID int) []string {
+	// Get all locations
+	locations, err := GetLocations()
+	if err != nil {
+		return []string{}
+	}
+
+	// Find the location with the matching ID
+	for _, location := range locations {
+		if location.ID == locationID {
+			return location.Locations
+		}
+	}
+
+	return []string{}
+}
+
 // Fonction pour récupérer les données de l'API et les stocker dans un tableau de LocationDATA
 func GetLocations() ([]LocationDATA, error) {
 	// Faites une requête HTTP GET pour récupérer les données de l'API

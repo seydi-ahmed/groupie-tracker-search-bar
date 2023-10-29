@@ -53,9 +53,9 @@ func DetailArt(id string) (*Post, error) {
 
 	// Get all artists
 	artists, err := GetArtists(dat)
-	if err != nil{
+	if err != nil {
 		return nil, fmt.Errorf("impossible d'aller chercher des artistes: %v", err)
-	}	
+	}
 
 	// Find the artist with the matching ID
 	for _, artist := range artists {
