@@ -1,12 +1,14 @@
 <!-- templates/index.html -->
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Liste des artistes</title>
     <link rel="stylesheet" href="/static/style.css">
 </head>
+
 <body class="body_index">
 
     <nav>
@@ -18,12 +20,21 @@
             <img src="/static/locations.jpg" alt="Emplacements" class="nav-icon">
         </a>
     </nav>
-    <div class="section"><h1 style="color: white;">Liste des artistes</h1></div>
+    <div class="section">
+        <h1 style="color: white;">Liste des artistes</h1>
+    </div>
 
     <!-- SEARCH-BAR BEGIN -->
-    
-    <h1>ok</h1>
-    
+
+    <label for="choix_bieres">Indiquez votre bière préférée :</label>
+    <input list="bieres" type="text" id="choix_bieres">
+    <datalist id="bieres">
+        <option value="Meteor">
+        <option value="Pils">
+        <option value="Kronenbourg">
+        <option value="Grimbergen">
+    </datalist>
+
     <!-- SEARCH-BAR END -->
 
     <ul>
@@ -38,6 +49,7 @@
         </li>
         {{end}}
     </ul>
-    
+
 </body>
+
 </html>
