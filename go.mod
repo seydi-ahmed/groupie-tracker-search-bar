@@ -1,3 +1,2 @@
-module github.com/sarmerer/groupie-tracker
-
-go 1.13
+module groupie
+go 1.19
